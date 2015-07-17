@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qtl-1s-eOb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Controller-->
+        <scene sceneID="yrF-Jf-1Mw">
+            <objects>
+                <tableViewController id="Qtl-1s-eOb" customClass="NewsController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="nw0-l5-Vmf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalCell" rowHeight="80" id="rag-GJ-iRg" customClass="NewsCell">
+                                <rect key="frame" x="0.0" y="22" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rag-GJ-iRg" id="1TK-WJ-VRD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8I-QA-jOC">
+                                            <rect key="frame" x="10" y="10" width="80" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="1NX-oG-dLw"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="JgJ-eW-0VB"/>
+                                                <constraint firstAttribute="height" constant="60" id="PNs-A4-1ic"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="W9R-tx-eRb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老汉好心给女子带路，至僻静处遭女子骗走手机零钱" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMr-RD-4NG">
+                                            <rect key="frame" x="102" y="33" width="488" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女子骗83岁老汉钱:不给告非礼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-G1-DQY">
+                                            <rect key="frame" x="102" y="10" width="203" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="t8I-QA-jOC" firstAttribute="centerY" secondItem="1TK-WJ-VRD" secondAttribute="centerY" id="0VL-dE-hcT"/>
+                                        <constraint firstItem="t8I-QA-jOC" firstAttribute="leading" secondItem="1TK-WJ-VRD" secondAttribute="leading" constant="10" id="VAx-1N-aVS"/>
+                                        <constraint firstItem="OnM-G1-DQY" firstAttribute="top" secondItem="t8I-QA-jOC" secondAttribute="top" id="YhI-fQ-Pta"/>
+                                        <constraint firstAttribute="trailing" secondItem="WMr-RD-4NG" secondAttribute="trailing" constant="10" id="ZTR-NK-hrd"/>
+                                        <constraint firstItem="WMr-RD-4NG" firstAttribute="leading" secondItem="OnM-G1-DQY" secondAttribute="leading" id="hwU-Ph-SHj"/>
+                                        <constraint firstItem="OnM-G1-DQY" firstAttribute="leading" secondItem="t8I-QA-jOC" secondAttribute="trailing" constant="12" id="nFV-qD-EXQ"/>
+                                        <constraint firstItem="WMr-RD-4NG" firstAttribute="top" secondItem="OnM-G1-DQY" secondAttribute="bottom" constant="5" id="vXW-tQ-BwK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="digestLbl" destination="WMr-RD-4NG" id="aXW-rT-5O2"/>
+                                    <outlet property="imgView" destination="t8I-QA-jOC" id="vbc-X7-Siw"/>
+                                    <outlet property="titleLbl" destination="OnM-G1-DQY" id="Rzd-R8-8n5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImgCell" rowHeight="180" id="J28-MI-ref" userLabel="BigImgCell" customClass="NewsCell">
+                                <rect key="frame" x="0.0" y="102" width="600" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J28-MI-ref" id="ScI-Y6-I6v">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E8s-ol-pSh">
+                                            <rect key="frame" x="8" y="39" width="584" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="d4p-Zb-gl5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女子骗83岁老汉钱:不给告非礼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gax-EP-HpE">
+                                            <rect key="frame" x="8" y="13" width="203" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老汉好心给女子带路，至僻静处遭女子骗走手机零钱" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB8-29-KMi">
+                                            <rect key="frame" x="8" y="149" width="584" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="E8s-ol-pSh" firstAttribute="top" secondItem="Gax-EP-HpE" secondAttribute="bottom" constant="8" id="6R3-1z-fdw"/>
+                                        <constraint firstAttribute="trailing" secondItem="lB8-29-KMi" secondAttribute="trailing" constant="8" id="B5u-2E-7ea"/>
+                                        <constraint firstItem="lB8-29-KMi" firstAttribute="top" secondItem="E8s-ol-pSh" secondAttribute="bottom" constant="10" id="EAx-OV-Exi"/>
+                                        <constraint firstItem="Gax-EP-HpE" firstAttribute="top" secondItem="ScI-Y6-I6v" secondAttribute="topMargin" constant="5" id="EL5-Qn-oqn"/>
+                                        <constraint firstAttribute="trailing" secondItem="E8s-ol-pSh" secondAttribute="trailing" constant="8" id="Wsq-Q3-neJ"/>
+                                        <constraint firstItem="Gax-EP-HpE" firstAttribute="leading" secondItem="ScI-Y6-I6v" secondAttribute="leading" constant="8" id="d3q-sO-bRx"/>
+                                        <constraint firstItem="lB8-29-KMi" firstAttribute="leading" secondItem="Gax-EP-HpE" secondAttribute="leading" id="i1V-At-ISz"/>
+                                        <constraint firstItem="E8s-ol-pSh" firstAttribute="leading" secondItem="Gax-EP-HpE" secondAttribute="leading" id="qI0-wo-xMo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bigImgView" destination="E8s-ol-pSh" id="fHX-dg-bKM"/>
+                                    <outlet property="digestLbl" destination="lB8-29-KMi" id="hnr-WZ-gam"/>
+                                    <outlet property="imgView" destination="E8s-ol-pSh" id="WBL-ls-yz9"/>
+                                    <outlet property="titleLbl" destination="Gax-EP-HpE" id="Q7h-wx-YiU"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImgsCell" rowHeight="120" id="DvK-vN-ivF" userLabel="ImgsCell" customClass="NewsCell">
+                                <rect key="frame" x="0.0" y="282" width="600" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DvK-vN-ivF" id="qnU-N1-vP7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女子骗83岁老汉钱:不给告非礼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0S-QU-WrA">
+                                            <rect key="frame" x="8" y="8" width="203" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Ey-KPF">
+                                            <rect key="frame" x="8" y="34" width="190" height="77"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="77" id="Hcq-gR-CSp"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Yx-cY-EHg">
+                                            <rect key="frame" x="205" y="34" width="190" height="77"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9dn-5V-Ppt">
+                                            <rect key="frame" x="403" y="34" width="190" height="77"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="x88-Ey-KPF" firstAttribute="top" secondItem="O0S-QU-WrA" secondAttribute="bottom" constant="8" id="4Y9-lg-6o9"/>
+                                        <constraint firstItem="9dn-5V-Ppt" firstAttribute="leading" secondItem="1Yx-cY-EHg" secondAttribute="trailing" constant="8" id="8wV-ol-Ep7"/>
+                                        <constraint firstAttribute="topMargin" secondItem="O0S-QU-WrA" secondAttribute="top" id="CvW-yF-rPc"/>
+                                        <constraint firstItem="9dn-5V-Ppt" firstAttribute="centerY" secondItem="1Yx-cY-EHg" secondAttribute="centerY" id="E1E-Sv-05N"/>
+                                        <constraint firstItem="1Yx-cY-EHg" firstAttribute="leading" secondItem="x88-Ey-KPF" secondAttribute="trailing" constant="7" id="Ejj-tl-MBp"/>
+                                        <constraint firstItem="1Yx-cY-EHg" firstAttribute="centerY" secondItem="x88-Ey-KPF" secondAttribute="centerY" id="HVz-hM-DLj"/>
+                                        <constraint firstItem="9dn-5V-Ppt" firstAttribute="height" secondItem="1Yx-cY-EHg" secondAttribute="height" id="IUo-w9-YDa"/>
+                                        <constraint firstItem="1Yx-cY-EHg" firstAttribute="width" secondItem="x88-Ey-KPF" secondAttribute="width" id="KPu-gC-qoJ"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="O0S-QU-WrA" secondAttribute="leading" id="OC6-Bk-4xv"/>
+                                        <constraint firstItem="9dn-5V-Ppt" firstAttribute="width" secondItem="1Yx-cY-EHg" secondAttribute="width" id="ecb-uH-ZSO"/>
+                                        <constraint firstItem="x88-Ey-KPF" firstAttribute="leading" secondItem="qnU-N1-vP7" secondAttribute="leading" constant="8" id="sgS-ZX-kIG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9dn-5V-Ppt" secondAttribute="trailing" constant="-1" id="tCf-HH-QXn"/>
+                                        <constraint firstItem="1Yx-cY-EHg" firstAttribute="height" secondItem="x88-Ey-KPF" secondAttribute="height" id="xCZ-yZ-Lnp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgView" destination="x88-Ey-KPF" id="PWO-By-glr"/>
+                                    <outlet property="titleLbl" destination="O0S-QU-WrA" id="i7b-d6-12N"/>
+                                    <outletCollection property="imgsView" destination="9dn-5V-Ppt" id="XbC-dE-WOW"/>
+                                    <outletCollection property="imgsView" destination="1Yx-cY-EHg" id="nLv-5R-rh2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qtl-1s-eOb" id="VWv-LW-7ol"/>
+                            <outlet property="delegate" destination="Qtl-1s-eOb" id="4ww-Pc-jud"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csn-SZ-lne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="62"/>
+        </scene>
+    </scenes>
+</document>
